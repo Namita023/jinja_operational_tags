@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: bisque;
+            text-align: center;
+            color: brown;
+            font-size: 20px;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- if-else condition -->
+    <h1>Details and eligibility:</h1>
+    {% if age < 18 %}
+    <h2>{{name}} is underage...</h2>
+    {% else %}
+    <h2>{{name}} is a adult...</h2>
+    {% endif %}
+
+    <!-- nested-if condition -->
+     {% if age > 18 %}
+     {% if gender == 'female' %}
+     <h2>A {{gender}} candidate eligible for job</h2>
+     {% else %}
+     <h2>A {{gender}} candidate eligible for job</h2>
+     {% endif %}
+     {% else %}
+     {% if gender == 'female' %}
+     <h2>A {{gender}} candidate not eligible for job</h2>
+     {% else %}
+     <h2>A {{gender}} candidate not eligible for job</h2>
+     {% endif %}
+     {% endif %}
+
+     <!-- for loop -->
+      {% for n in name %}
+      <h2><marquee>{{n}}</marquee></h2>
+      {% endfor %}
+</body>
+</html>
